@@ -19,12 +19,14 @@ The goal of the project is to classify if a photo of a car has a police or civil
 - ## Visualization
 - Due to the nature of the goal, I will be displaying multiple different graphs to show how the model performs with different amounts of images.
     - 400 Civilian/260 Police
+<img width="857" height="357" alt="image" src="https://github.com/user-attachments/assets/b1524960-d29a-4a7c-a9d1-5b3cf6333b55" />
     - 400 Civilian/100 Police
 <img width="861" height="347" alt="image" src="https://github.com/user-attachments/assets/ba64cd19-a569-4d14-8651-52e7b4258a82" />
     - 200 Civilian/100 Police
 <img width="854" height="358" alt="image" src="https://github.com/user-attachments/assets/406814ad-dce2-43ae-8531-ff7bbcd69198" />
     - 100 Civilian/100 Police
 <img width="854" height="356" alt="image" src="https://github.com/user-attachments/assets/356d2e6b-73e3-4060-bf91-9f1c5e601030" />
+       50 Civilian/50 Police
 
 
 
@@ -40,13 +42,15 @@ The goal of the project is to classify if a photo of a car has a police or civil
 - With around 10 epochs taking a minute each, the model was pretty fast, taking only 10 minutes each time.
 
 ## Perfomance
-
+- Despite the change in amount of images, my validation accuracy didn't change too much. Ranging from 70-80% on average
+- The highest validation accuracy by the end of the 10 epochs was
+- The lowest validation accuracy by the end of the 10 epochs was .6010
 
 ## Conclusions
-
+Interstingly enough, it seems like the less photo used, the more accurate the model was. While I wish this was simply the case, this is most likely the result of the model guessing, but not having as many points to get wrong. I made sure to add wieghts to prevent the model from only choosing civilian, but the results are still sub-par. With the most amount of images, the accuracy was .6010. 
 
 ## Future Plans
-
+This project was really simple, if I were to add onto this project, I would go about changing the data. Instead of having a singular car in an image and determing if it was a police car or not, I would like to have an image with many cars and determine if it contains a police car. I would then go one step beyond that and use object detection to determine where a police car is. With that being done, instead of the obvious police cars, targeting specfic models of cars could be used incase of amber alerts or other helpful concepts.
 
 # Downloading Data
 
