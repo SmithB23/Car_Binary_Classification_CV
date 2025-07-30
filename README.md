@@ -26,7 +26,9 @@ The goal of the project is to classify if a photo of a car has a police or civil
 <img width="854" height="358" alt="image" src="https://github.com/user-attachments/assets/406814ad-dce2-43ae-8531-ff7bbcd69198" />
     - 100 Civilian/100 Police
 <img width="854" height="356" alt="image" src="https://github.com/user-attachments/assets/356d2e6b-73e3-4060-bf91-9f1c5e601030" />
-       50 Civilian/50 Police
+    - 50 Civilian/50 Police
+<img width="850" height="358" alt="image" src="https://github.com/user-attachments/assets/fbc9f807-2ff1-4688-8957-4b809270e180" />
+
 
 
 
@@ -43,17 +45,19 @@ The goal of the project is to classify if a photo of a car has a police or civil
 
 ## Perfomance
 - Despite the change in amount of images, my validation accuracy didn't change too much. Ranging from 70-80% on average
-- The highest validation accuracy by the end of the 10 epochs was
+- The highest validation accuracy by the end of the 10 epochs was .8593
 - The lowest validation accuracy by the end of the 10 epochs was .6010
 
 ## Conclusions
-Interstingly enough, it seems like the less photo used, the more accurate the model was. While I wish this was simply the case, this is most likely the result of the model guessing, but not having as many points to get wrong. I made sure to add wieghts to prevent the model from only choosing civilian, but the results are still sub-par. With the most amount of images, the accuracy was .6010. 
+Interstingly enough, it seems like the less photo used, the more accurate the model was. While I wish this was simply the case, this is most likely the result of the model guessing, but not having as many points to get wrong. I made sure to add wieghts to prevent the model from only choosing civilian, but the results are still sub-par. With the most amount of images, the accuracy was .6010. The best accuracy was .8593, which is much better than guessing. This accuracy was made when using 50 civilian images and 50 police images. However, the goal was not to get the best accuracy, it was to see how well he model could do without a large amount of images. *50 civilian and 50 police cars had the best results* with the least amount of images. When trying to use even less, 50 images of each, the model began to become worse with a validation accuracy of at the time of the last epoch. 50 images of each seems to be the sweet spot for this binary classification. However, running more epochs could easily lead to better results
 
 ## Future Plans
 This project was really simple, if I were to add onto this project, I would go about changing the data. Instead of having a singular car in an image and determing if it was a police car or not, I would like to have an image with many cars and determine if it contains a police car. I would then go one step beyond that and use object detection to determine where a police car is. With that being done, instead of the obvious police cars, targeting specfic models of cars could be used incase of amber alerts or other helpful concepts.
 
 # Downloading Data
-
+Both datasets were gathered on roboflow
+-Police Cars: https://app.roboflow.com/smithb23/police_cars-5x7fo/1   2.87 MB
+-Cars: https://app.roboflow.com/smithb23/vehicle-classification-eapcd-al8dr/2 264 MB
 
 # Notebook 
-
+The Car_Pro_Computer_Vision.ipynb file holds everything I did. As of the moment, the neatness could be worked on as well as some more comments, but using the file should note be difficult.
