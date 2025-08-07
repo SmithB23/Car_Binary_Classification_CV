@@ -3,7 +3,8 @@
 This project aims to differentiate between police cars and civilian cars.
 
 # Overview
-The goal of the project is to classify if a photo of a car has a police or civilian car through binary classification. I will be using transfer learning to speed up the process, use less data, and have a good accuracy. Using all the photos available, I was getting 100% training accuracy, as well as 100% validation accuracy. Due to how obvious a police car is, this is not unexpected. With that, my goal become to see how few photos I could use and still maintain proper results.
+The goal of the project is to classify if a photo of a car has a police or civilian car through binary classification, as well as see how the model would preform given less photos. I will be using transfer learning to speed up the process, use less data, and have a good accuracy. Using ResNet50, I determined that the differnce between the amount of photos did not play much significance in increasing the accuracy. Despite the seemingly randomness of the accuracy depending on the amount of photos, the highest accuracy was achieved with 100 total photos (50 Police/50 Civilian), at 85.93%.
+
 # Summary 
 - ## Data
     - Data consistsof two seperate folders containing police cars as well as civilian cars.
