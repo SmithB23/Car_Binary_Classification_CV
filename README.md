@@ -51,7 +51,7 @@ I used varying amounts of images, but the 50/50 split showed above had the best 
 |---|---|---|---|---|---|
 |660|260|400|10|58.61%|94.23%|
 |500|100|400|10|83.89%|90.46|
-|300|100|200|10|74.87%||
+|300|100|200|10|74.87%|86.84|
 |100|50|50|10|85.93%|84.62%|
 
 
@@ -63,6 +63,7 @@ This project was really simple, if I were to add onto this project, I would go a
 
 # Downloading Data
 Both datasets were gathered on roboflow
+
 -Police Cars: https://app.roboflow.com/smithb23/police_cars-5x7fo/1   2.87 MB
 -Cars: https://app.roboflow.com/smithb23/vehicle-classification-eapcd-al8dr/2 264 MB
 
