@@ -20,7 +20,10 @@ The goal of the project is to classify if a photo of a car has a police or civil
     - Used minor augmentation for a better model
  
 - ## Visualization
-    - 50 Civilian/50 Police
+-Example of a before and after image regarding augmentation
+<img width="757" height="389" alt="image" src="https://github.com/user-attachments/assets/c5aa3d7f-6c40-46fa-b517-2ab1246924ff" />
+
+-50 Civilian/50 Police
 <img width="850" height="358" alt="image" src="https://github.com/user-attachments/assets/fbc9f807-2ff1-4688-8957-4b809270e180" />
 
 I used varying amounts of images, but the 50/50 split showed above had the best results. However, regardless of the number of images, the results and their respective graphs for accuracy as well as loss did have a significant enough differnce for a true comparison. They were all really similiar to eachother, which is a result in itself.
@@ -42,11 +45,15 @@ I used varying amounts of images, but the 50/50 split showed above had the best 
 ## Perfomance
 - Despite the change in amount of images, my validation accuracy didn't change too much. Ranging from 70-80% on average
 - The highest validation accuracy by the end of the 10 epochs was .8593
-- The lowest validation accuracy by the end of the 10 epochs was .6010
+- The lowest validation accuracy by the end of the 10 epochs was .5861
 
 |Total Images|Police Images|Civilian Images|Epochs|Accuracy|Recall|
 |---|---|---|---|---|---|
-|660|260|400|10|100%|100%|
+|660|260|400|10|58.61%|94.23%|
+|500|100|400|10|83.89%|90.46|
+|300|100|200|10|74.87%||
+|100|50|50|10|85.93%|84.62%|
+
 
 ## Conclusions
 Interstingly enough, it seems like the less photo used, the more accurate the model was. While I wish this was simply the case, this is most likely the result of the model guessing, but not having as many points to get wrong. I made sure to add wieghts to prevent the model from only choosing civilian, but the results are still sub-par. With the most amount of images, the accuracy was .6010. The best accuracy was .8593, which is much better than guessing. This accuracy was made when using 50 civilian images and 50 police images. However, the goal was not to get the best accuracy, it was to see how well he model could do without a large amount of images. *50 civilian and 50 police cars had the best results* with the least amount of images. When trying to use even less, 50 images of each, the model began to become worse with a validation accuracy of at the time of the last epoch. 50 images of each seems to be the sweet spot for this binary classification. However, running more epochs could easily lead to better results
